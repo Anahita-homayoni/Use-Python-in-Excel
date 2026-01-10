@@ -130,3 +130,37 @@ and	Both conditions must be true
 Simple explanation
 
 This formula finds all Alternative rock bands that have at least four members and stores them in a new table.
+
+
+
+Filtering rows using startswith()
+bands[bands["Group"].str.startswith("The")]
+
+What this formula does
+
+This formula filters your bands table and returns only the rows where the Group name starts with the word “The”.
+
+Example matches:
+
+The Beatles
+
+The Doors
+
+The Rolling Stones
+
+Explanation of each part
+Part	Meaning
+bands	Your original DataFrame (Excel table)
+bands["Group"]	Selects the Group column
+.str	Enables text (string) functions
+.startswith("The")	Checks if the name begins with “The”
+bands[ ... ]	Returns only rows that match the condition
+Simple explanation
+
+This formula finds all band names that start with “The” and shows them in a new filtered table.
+
+Tip for learners
+
+To ignore capital letters (The, the, THE), use:
+
+bands[bands["Group"].str.lower().str.startswith("the")]
