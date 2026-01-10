@@ -100,3 +100,33 @@ Your data is grouped by Genre, and within each genre, bands are ordered by lates
 Simple explanation for beginners
 
 This formula organizes your table by Genre alphabetically, and inside each Genre it shows the newest bands first.
+
+
+Filtering data with query() in Python in Excel
+bandsq = bands.query("Genre == 'Alternative rock' and Members >= 4")
+
+What this formula does
+
+This line filters your bands DataFrame and keeps only the rows that match both conditions:
+
+Genre is Alternative rock
+
+Members are 4 or more
+
+The filtered result is saved in a new DataFrame called bandsq.
+
+Explanation of each part
+Part	Meaning
+bands	Your original Excel data as a DataFrame
+query()	Pandas function used to filter rows
+"Genre == 'Alternative rock'"	Keeps only Alternative rock bands
+Members >= 4	Keeps bands with 4 or more members
+bandsq	New DataFrame containing the filtered result
+Operators used
+Symbol	Meaning
+==	Equal to
+>=	Greater than or equal to
+and	Both conditions must be true
+Simple explanation
+
+This formula finds all Alternative rock bands that have at least four members and stores them in a new table.
