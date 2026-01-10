@@ -63,3 +63,40 @@ In simple words:
 
 XL() brings Excel data into Python.
 pandas functions like .shape, .size, and .columns let you explore and understand your Excel data easily.
+
+
+Sorting data with sort_values() in Python in Excel
+sortedbands = bands.sort_values(by=["Genre", "Year"], ascending=[True, False])
+
+What this formula does
+
+This line sorts your bands DataFrame in two levels:
+
+By Genre (A → Z)
+
+By Year (Newest → Oldest inside each Genre)
+
+Explanation of each part
+Part	Meaning
+bands	Your original Excel data loaded as a DataFrame
+sort_values()	Pandas function used to sort data
+by=["Genre", "Year"]	Columns used for sorting
+ascending=[True, False]	Sort order for each column
+Ascending vs Descending
+Value	Order	Example
+True	Ascending (A→Z, 0→9, Oldest→Newest)	
+False	Descending (Z→A, 9→0, Newest→Oldest)	
+
+So:
+
+Genre = True → A to Z
+
+Year = False → Newest to Oldest (inside each Genre)
+
+Result
+
+Your data is grouped by Genre, and within each genre, bands are ordered by latest year first.
+
+Simple explanation for beginners
+
+This formula organizes your table by Genre alphabetically, and inside each Genre it shows the newest bands first.
