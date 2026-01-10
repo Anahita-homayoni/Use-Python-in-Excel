@@ -13,6 +13,8 @@ Get data from Excel	Reads values from selected cells or tables
 Send results to Excel	Returns Python output into worksheet cells
 Keep formulas dynamic	Recalculates automatically when Excel data changes
 Work with tables easily	Handles Excel Tables as DataFrames
+
+
 Simple example:
 import pandas as pd
 
