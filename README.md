@@ -164,3 +164,39 @@ Tip for learners
 To ignore capital letters (The, the, THE), use:
 
 bands[bands["Group"].str.lower().str.startswith("the")]
+
+
+
+
+Example: Convert Group names to uppercase and sort
+# Convert all Group names to uppercase
+sortedbands["Group"] = sortedbands["Group"].apply(str.upper)
+
+# Sort the DataFrame by Genre and Year
+sortedbands = sortedbands.sort_values(by=["Genre", "Year"], ascending=[True, False])
+
+# Show the result
+sortedbands
+
+What this does
+Line	Explanation
+sortedbands["Group"].apply(str.upper)	Converts every band name in the Group column to uppercase letters
+sortedbands.sort_values(...)	Sorts the DataFrame first by Genre (A→Z), then by Year (Newest→Oldest)
+sortedbands	Displays the updated table
+
+Example Input
+Group	Genre	Year	Members
+The Beatles	Rock	1965	4
+nirvana	Alternative Rock	1991	3
+Metallica	Metal	1983	4
+Example Output after applying str.upper and sorting
+Group	Genre	Year	Members
+METALLICA	Metal	1983	4
+NIRVANA	Alternative Rock	1991	3
+THE BEATLES	Rock	1965	4
+Why this is useful for learners
+.apply(str.upper) — Standardizes text formatting. Makes filtering (like .startswith("THE")) consistent.
+
+.sort_values() — Organizes your table by multiple criteria (Genre, Year).
+
+Combines text manipulation and sorting, which is very common in data cleaning.
