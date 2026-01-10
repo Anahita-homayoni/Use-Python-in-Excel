@@ -26,3 +26,40 @@ In short:
 
 XL() is the bridge between Excel and Python.
 It allows Excel users to run Python calculations directly inside Excel.
+
+
+Getting information about a DataFrame
+
+Once your Excel data is inside Python (as a DataFrame), you can inspect it using these useful properties:
+
+Function	What it shows
+x.shape	Number of rows and columns
+x.size	Total number of values
+x.columns	Column names
+x.head()	First 5 rows
+x.tail()	Last 5 rows
+x.info()	Data types and missing values
+x.describe()	Summary statistics
+Example: Get DataFrame information in Excel
+=PY(
+x = XL("A1:C10")
+x.shape
+)
+
+
+Output:
+Shows how many rows and columns are in your Excel range.
+
+=PY(
+x = XL("A1:C10")
+x.columns
+)
+
+
+Output:
+Displays the column names.
+
+In simple words:
+
+XL() brings Excel data into Python.
+pandas functions like .shape, .size, and .columns let you explore and understand your Excel data easily.
