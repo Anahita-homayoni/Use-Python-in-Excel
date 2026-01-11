@@ -228,3 +228,41 @@ Returns only rows where the group column contains the typed text
 If the cell is empty, the full dataset is returned
 
 This approach removes heavy Excel formulas and moves filtering logic to Python, making large Excel-based ERP reports faster, smaller, and more stable.
+
+
+
+
+📌 Subject
+
+Band Size Classification Using Pandas
+
+🧾 Description
+
+This code is used to convert a numeric column from an Excel dataset into descriptive size categories.
+It classifies each band based on the number of members and replaces the numeric values with readable text labels.
+
+🧠 How It Works
+Members	Category
+1 – 2	Small
+3 – 4	Medium
+5+	Large
+💻 Code
+def count_to_string(x): 
+    if x <= 2:
+        return "Small"
+    if x > 2 and x <= 4:
+        return "Medium"
+    return "Large"
+  
+bands["Members"] = bands["Members"].apply(count_to_string)
+bands
+
+📊 Purpose
+
+This transformation improves data readability and helps in:
+
+Creating grouped summaries
+
+Generating charts
+
+Preparing data for analysis or machine learning models
