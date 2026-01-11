@@ -1,7 +1,9 @@
 # Use-Python-in-Excel
+
+Shortcut key to create a Python cell in Excel: Ctrl + Alt + Shift + P
 This repository contains beginner-friendly tutorials, examples, and exercises for learning how to use Python directly in Microsoft Excel.
 
-Function of XL() in Python in Excel
+Function of XL() in Python in
 
 XL() is a special function used in Python in Excel to connect Python with Excel cells, tables, and ranges.
 
@@ -402,3 +404,5 @@ Use Seaborn when you need to:
 ✔ Quickly explore patterns and trends
 ✔ Visually compare groups
 ✔ Create clear, publication-quality plots with minimal code
+
+
