@@ -342,3 +342,63 @@ Avoid formatting errors when importing Excel files
 🧠 Summary
 
 This code reads raw Excel dates and converts them into Python datetime objects so they can be analyzed, compared, and manipulated correctly in your data analysis projects.
+
+
+
+
+📊 Data Visualization Library — Seaborn
+
+Website: https://seaborn.pydata.org/
+
+🔹 What Is Seaborn?
+
+Seaborn is a powerful Python library built on top of Matplotlib that makes it easy to create beautiful and informative statistical graphics.
+
+It provides:
+
+High-level interface for drawing attractive plots
+
+Built-in themes and color palettes
+
+Easy integration with Pandas data structures
+
+Many convenient plot types for statistical analysis
+
+🔹 Why Use Seaborn?
+
+Seaborn helps you explore and visualize your data faster and more effectively.
+It’s especially useful when working with datasets from Excel, CSV, or Pandas DataFrames.
+
+Some common visualization types in Seaborn:
+
+Plot Type	Use Case
+sns.barplot()	Compare averages across categories
+sns.histplot()	Show distribution of numeric data
+sns.boxplot()	Display data spread and outliers
+sns.scatterplot()	Plot relationships between two numeric variables
+sns.heatmap()	Visualize correlation matrices
+🔹 Simple Example
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set_theme(style="darkgrid")
+
+sns.histplot(data=bands, x="Members")
+plt.title("Distribution of Band Member Counts")
+plt.show()
+
+
+This code:
+
+Imports Seaborn and Matplotlib
+
+Sets a theme for nicer visuals
+
+Draws a histogram of the Members column
+
+🔹 When to Use Seaborn
+
+Use Seaborn when you need to:
+✔ Quickly explore patterns and trends
+✔ Visually compare groups
+✔ Create clear, publication-quality plots with minimal code
