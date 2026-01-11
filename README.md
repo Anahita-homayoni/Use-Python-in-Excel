@@ -200,3 +200,31 @@ Why this is useful for learners
 .sort_values() — Organizes your table by multiple criteria (Genre, Year).
 
 Combines text manipulation and sorting, which is very common in data cleaning.
+
+
+
+📌 Dynamic Excel-Driven Filtering with Python (pandas)
+
+This snippet demonstrates how Excel can be used as a simple user interface, while Python handles all heavy data processing.
+
+term = xl("F4")
+
+if term is not None:
+    result = bands[bands["group"].str.contains(term)]
+else:
+    result = bands
+
+result
+
+
+How it works:
+
+Reads a value directly from Excel cell F4
+
+Uses it as a dynamic filter keyword
+
+Returns only rows where the group column contains the typed text
+
+If the cell is empty, the full dataset is returned
+
+This approach removes heavy Excel formulas and moves filtering logic to Python, making large Excel-based ERP reports faster, smaller, and more stable.
